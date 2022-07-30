@@ -440,7 +440,7 @@ fn init(width: usize, height: usize) {
     game.reset();
     game.start();
 
-    write!(game.stdout, "{}{}{}", clear::All, style::Reset, cursor::Goto(1, 1)).unwrap();
+    write!(game.stdout, "{}{}{}{}", clear::All, style::Reset, cursor::Show, cursor::Goto(1, 1)).unwrap();
     game.stdout.flush().unwrap();
 }
 
